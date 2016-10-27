@@ -1,0 +1,18 @@
+<video autoplay controls playsinline loop poster="screenshot.png" id="bgvid">
+    <source src="video.mp4" type="video/mp4">
+</video>
+<button onclick="enableMute()" type="button" class="mute-button">Mute sound</button>
+
+<script>
+	var vid = document.getElementById("bgvid");
+
+	function enableMute() { 
+	    vid.muted = ! vid.muted;
+	}
+
+	$(function() {                       
+	  $(".mute-button").click(function() { 
+	    $(this).toggleClass("active");    
+	  });
+	});
+</script>
